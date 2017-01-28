@@ -89,7 +89,7 @@
   width: 200px;
   color: white;
 }
-/*
+
 .input-box span:after {
   content: "";
   width: 0;
@@ -100,7 +100,8 @@
   position: absolute;
   right: 100%;
   top: 10px;
-}*/
+}
+
 .span-box{
     background:rgba(36, 36, 36, 0.84);
     color:#fff;
