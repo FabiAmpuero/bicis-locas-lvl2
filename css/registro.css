@@ -101,13 +101,3 @@
   right: 100%;
   top: 10px;
 }
-
-.span-box{
-    background:rgba(36, 36, 36, 0.84);
-    color:#fff;
-    padding:6px;
-    position: absolute;
-    left: 63%;
-    width: 200px;
-}
-
