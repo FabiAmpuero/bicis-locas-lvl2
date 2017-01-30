@@ -25,7 +25,7 @@ var validator={
         }
         return isValid;
     }
-}
+};
 
 function validateForm() {
 	var name=document.getElementById("name");
@@ -107,4 +107,25 @@ function removeMessage(_inputId){
         elemento.parentNode.removeChild(elemento.nextSibling);
     }
 }
+
+var nombre = document.getElementById("name");
+nombre.addEventListener("keyup",myFunction);
+function myFunction() {
+    var string=nombre.value;
+    var array=nombre.value.split("");
+    var espacio=[];
+    espacio+=string.search(" ");
+    var mayus=espacio+1;
+    console.log(espacio);
+    
+}
+
+
+
+
+
+
+
+
+
 
