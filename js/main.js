@@ -1,9 +1,15 @@
 // objeto literal (no tiene constructor)/ reglas de validacion
 var validator={
 	// Los campos nombre y apellido sólo deben permitir caracteres de la A-Z
-	isText: function(_string){
-		var regex = /([a-zA-Z]+)/g;
-		return regex.test(_string);
+	isText: function(_value){
+        var isValid=true;
+        var regex = /([0-9])/g;
+        if(_value.length==0 || regex.test(_value)){
+            isValid=false;
+        }
+        return isValid;
+		/*var regex = /([0-9])/g;
+		return regex.test(_string);*/
 	},
 	// Validar que el campo email tenga un formato válido
 	isEmail: function(_string){
@@ -24,7 +30,14 @@ var validator={
             isValid= false;
         }
         return isValid;
-    }
+    },
+    /*isEmpty: function(_value){
+        var isValid=true;
+        if(_value.length==0){
+            isValid=false;
+        }
+        return isValid;
+    }*/   
 };
 
 function validateForm() {
@@ -32,9 +45,8 @@ function validateForm() {
 	var lastName=document.getElementById("lastname");
 	var email=document.getElementById("input-email");
 	var password=document.getElementById("input-password");
-    
     var select= document.getElementsByTagName("select")[0];
-    console.log(select.value);
+    /*console.log(select.value);*/
 
 	// -------------------------------- validacion de texto NOMBRE
     if(validator.isText(name.value)){
@@ -43,7 +55,12 @@ function validateForm() {
     else{
         createMessage("name","No es válido");
     }
-    
+    /*if(validator.isEmpty(name.value)){
+        removeMessage("name");
+    }
+    else{
+        createMessage("name","No es válido");
+    }*/
     // -------------------------------- validacion de texto APELLIDO
     if(validator.isText(lastName.value)){
         removeMessage("lastname");
