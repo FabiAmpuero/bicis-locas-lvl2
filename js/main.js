@@ -109,15 +109,44 @@ function removeMessage(_inputId){
 }
 
 var nombre = document.getElementById("name");
-nombre.addEventListener("keyup",myFunction);
-function myFunction() {
-    var string=nombre.value;
+nombre.addEventListener("keyup",nameFunction);
+function nameFunction() {
     var array=nombre.value.split("");
-    var espacio=[];
-    espacio+=string.search(" ");
-    var mayus=espacio+1;
-    console.log(espacio);
+    var first=array[0];
+    var upper=first.toUpperCase();
+    var space = false;
     
+    for(var i=1; i<array.length; i++) {
+            if(space){
+                upper += array[i].toUpperCase();
+                space = false;
+            } else {
+                upper += array[i];
+                if(array[i] == " ")
+                    space = true;
+            }
+        nombre.value = upper;
+    }
+}
+var apellido = document.getElementById("lastname");
+apellido.addEventListener("keyup",lastNameFunction);
+function lastNameFunction() {
+    var array=apellido.value.split("");
+    var first=array[0];
+    var upper=first.toUpperCase();
+    var space = false;
+    
+    for(var i=1; i<array.length; i++) {
+            if(space){
+                upper += array[i].toUpperCase();
+                space = false;
+            } else {
+                upper += array[i];
+                if(array[i] == " ")
+                    space = true;
+            }
+        apellido.value = upper;
+    }
 }
 
 
