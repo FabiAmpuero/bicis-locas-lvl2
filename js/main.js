@@ -165,13 +165,3 @@ function lastNameFunction() {
         apellido.value = upper;
     }
 }
-
-
-
-
-
-
-
-
-
-
