@@ -121,7 +121,7 @@ function nameFunction() {
                 upper += array[i].toUpperCase();
                 space = false;
             } else {
-                upper += array[i];
+                upper += array[i].toLowerCase();
                 if(array[i] == " ")
                     space = true;
             }
@@ -141,7 +141,7 @@ function lastNameFunction() {
                 upper += array[i].toUpperCase();
                 space = false;
             } else {
-                upper += array[i];
+                upper += array[i].toLowerCase();
                 if(array[i] == " ")
                     space = true;
             }
