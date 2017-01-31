@@ -97,12 +97,12 @@ function correoText (){
 function passwordText (){
     var password=document.getElementById("input-password");
     if(password.nextSibling==null){
-        if(isComplete(password.value) || password.value=="123456" || password.value=="098754"){
+        if(password.value=="123456" || password.value=="098754" || password.value.length<6){
             createSpan(password,"Esta Contraseña no es válida");
         }
     } else{
         if(password.nextSibling != null){
-            if(!isComplete(password.value) && password.value!="123456" && password.value!="098754"){
+            if(password.value.length>=6 && password.value!="123456" && password.value!="098754"){
                 removeSpan(password);
             }
         }
